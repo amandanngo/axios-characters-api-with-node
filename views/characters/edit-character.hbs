@@ -1,0 +1,24 @@
+<h1>Edit {{ character.name }}</h1>
+
+{{!-- 
+<h3> Occupation: {{ character.occupation }} </h3>
+
+<p> Weapon: {{ character.weapon }} </p>
+ --}}
+
+<form action="/characters/{{character.id}}/update" method="POST">
+    
+    <div>
+        <label>Name</label>
+        <input type="text" name="name" placeholder="{{ character.name }}">
+    </div>
+    <div>
+       <label>Occupation</label>
+        <input type="text" name="occupation" placeholder="{{ character.occupation }}">
+    </div>
+    <div>
+       <label>Weapon</label>
+        <input type="text" name="weapon" placeholder="{{ character.weapon }}">
+    </div>
+    <button type="submit">Edit</button>
+</form>
